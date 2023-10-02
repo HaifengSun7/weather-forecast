@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto+Slab');
+
+html, body, #root {
+  height: 100vh;
+  margin:0;
+  padding:0;
+  font-size: 15px;
+}
+
+h1, h2  {
+  font-family: Cursive, "Lucida Console", "Courier New", monospace;
+  font-size: 2.5em;
+  text-align:center;
+  margin: 40px;
+  letter-spacing:3px;
+}
+
+.title {
+  color:brown;
+}
+
+#root{
+background-image: url('images/cool.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.App {
+  height:100%;
+  width:100%;
+  background-color:rgba(255,255,255,0.1); 
+ position:fixed;
+ overflow-y:scroll;
+ position: relative;
+}
+
+.centered-text{
+  text-align:center;
+}
+
+.capitalized{
+  text-transform: capitalize;
+}
+.card {
+  font-family: serif, 'Roboto Slab';
+  font-size: 1.5em;
+  color:#ffffff;
+  background-color:gray;
+  font-weight: 300;
+  box-sizing:border-box;
+  padding: 10px;
+  margin: 5px;
+  width: 24%;
+  box-shadow: 0 0 5px black;
+}
+
+.card:hover{
+cursor:pointer;
+background-image: linear-gradient(white 90%, grey);
+}
+
+.weather-icon{
+  height: 50px;
+  padding: 30px;
+  float:right;
+}
+
+ul{
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+li:first-child{
+  font-size: 1.5em;
+}
+
+li{
+  padding-left: 10px;
+}
+
+.searchPanel{
+  height:600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top:5px;
+}
+
+.text-input{
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin: 10px;
+  border: 2px solid white;
+  text-indent: 10px;
+  box-shadow: 0 0 5px black;
+  position:relative;
+}
+.text-input:focus, button:focus{
+  outline: none;
+}
+.error-info{
+  position:absolute;
+  color: red;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align:center;
+  width:225px;
+  font-family:'Roboto Slab', serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.is-rounded{
+  border-radius: 15px; 
+}
+
+.submit{
+  background-color:white;
+  font-weight: 500;
+  border-radius: 20px;
+  border:none;
+  box-shadow: 0 0 5px black;
+}
+
+.submit:hover{
+color:white;
+background-color:#333;
+}
+
+button{
+font-size: 1.25em;
+box-sizing: border-box;
+padding: 6px 20px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+}
+
+.close-btn{
+  position:absolute;
+  font-size:1.2em;
+  text-align:center;
+  background-color:rgb(100, 75, 211);
+  font-weight: bold;
+  height: 40px;
+  width: 40px;
+  padding:0;
+  top: 0;
+  right: 0;
+  border:none;
+}
+
+.close-btn:hover{
+  color:white;
+  background-color:#333;
+}
+
+.forecast-table-wrapper{
+  
+width:100%;
+}
+
+table{
+  font-family: 'Roboto Slab', serif;
+  width:75%;
+  max-width:900px;
+  margin:30px auto;
+  border-collapse: collapse;
+  background-color: antiquewhite;
+  box-shadow: 0 0 5px black;
+  padding:10px;
+}
+
+.table-header{
+  font-size:1.75em;
+  padding:15px;
+  border-bottom: 2px solid gray;
+  position:relative;
+}
+
+th{
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+td .weather-icon{
+  float:none;
+  padding: 0;
+}
+
+th, td {
+  padding:5px;
+  text-align:center;
+}
+
+td{
+  border-top: 2px solid gray;
+}
+
+@media only screen and (min-width: 1500px) {
+  /* For mobile phones: */
+  .card{
+    width: 19%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  /* For mobile phones: */
+  .card{
+    width: 32%;
+  }
+    #root{
+background-image: url('images/cool.jpg');
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  /* For mobile phones: */
+  .weather-icon{
+    float:none;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:30px 15px 15px 15px;
+  }
+
+  .wind-info{
+    display:none;
+  }
+  table{
+    margin: 10px auto;
+  }
+
+      #root{
+background-image: url('images/cool.jpg');
+  }
+
+  li{
+    text-align:center;
+  }
+    .card{
+    width:47%;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+table{
+  box-sizing:border-box;
+  width:98%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+  /* For mobile phones: */
+    .card{
+    width:99%;
+  }
+  .text-input{
+    display:block;
+  }
+  .submit{
+    margin:auto;
+    display:block;
+  }
+      #root{
+background-image: url('images/cool.jpg');
+  }
+}
