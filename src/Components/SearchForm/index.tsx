@@ -35,7 +35,7 @@ export default class extends React.Component<Props, IState> {
   };
 
   getHourlyData = () => {
-    const apiKey: string = "33b985291235fc7df89ea4df9600c81c";
+    const apiKey: string = "61e3c4acca73ca87fea8c4c7eb9987dd";
     const urlhourly: string = `https://api.openweathermap.org/data/2.5/forecast?q=${
       this.state.city
     }&units=metric&APPID=${apiKey}`;
@@ -58,8 +58,8 @@ export default class extends React.Component<Props, IState> {
   };
 
   getWeeklyData = () => {
-    const apiKey: string = "33b985291235fc7df89ea4df9600c81c";
-    const urlweekly: string = `https://api.openweathermap.org/data/2.5/find?q=${
+    const apiKey: string = "61e3c4acca73ca87fea8c4c7eb9987dd";
+    const urlweekly: string = `https://api.openweathermap.org/data/2.5/forecast?q=${
       this.state.city
     }&units=metric&APPID=${apiKey}`;
 
@@ -74,7 +74,10 @@ export default class extends React.Component<Props, IState> {
         return false;
       })
       .then(jsonResponse => {
+        console.log(jsonResponse)
         if (jsonResponse) {
+          jsonResponse.list = jsonResponse.list.filter((item: any)=>{
+            return item.dt_txt.includes("06:00:00")})
           this.props.onSubmitWeekly(jsonResponse.list);
         }
       });

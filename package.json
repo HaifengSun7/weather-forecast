@@ -6,7 +6,8 @@
     "moment": "^2.24.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts-ts": "3.1.0"
+    "react-scripts-ts": "3.1.0",
+    "reactjs-popup": "^2.0.6"
   },
   "scripts": {
     "start": "react-scripts-ts start",
