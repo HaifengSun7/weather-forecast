@@ -8,9 +8,14 @@ Utilized openweathermap api.
 
 
 ## Usage:
+Install:
 
-    `npm install`
-
-    `npm start`
+    npm install
     
-    `npm run build`
+Start:
+
+    npm start
+    
+Build:
+
+    npm run build
