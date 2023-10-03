@@ -97,7 +97,7 @@ class App extends React.Component<{}, IState> {
               <Card
                 onDisplayDetails={this.handleGetDayDetails}
                 forecast={dailydata}
-                key={dailydata.id}
+                key={dailydata.dt}
                 day={this.getDayName(index)}
               />
             ))}

@@ -1,6 +1,13 @@
-### See live demo: https://city-forecast.firebaseapp.com/
+# Weather Forecast
+A React application that displays weather forecast for the next 5 days with 3-hour step, for all cities.
+Utilizes openweathermap api.
+
+### See live demo: TODO
+
+
 
 ## Usage:
-npm install
-npm start
-npm run build
+
+    `npm install`
+    `npm start`
+    `npm run build`
