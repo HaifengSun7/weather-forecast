@@ -3,7 +3,7 @@ A React application that displays weather forecast for the next 5 days with 3-ho
 
 Utilized openweathermap api.
 
-### See live demo: TODO
+### See the live demo: [weather-forecast](https://haifengsun7.github.io/weather-forecast/)
 
 
 
